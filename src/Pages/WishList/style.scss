@@ -1,0 +1,23 @@
+.wishlist {
+  max-height: 80vh;
+  .wishlistitem {
+    display: flex;
+    .movie-part {
+      flex: 2;
+      text-align: left;
+    }
+    .action-part {
+      flex: 1;
+      text-align: right;
+      .remove {
+        background: red !important;
+        border-color: red !important;
+      }
+      .remove:hover {
+        color: red;
+        background: white !important;
+        border-color: red !important;
+      }
+    }
+  }
+}

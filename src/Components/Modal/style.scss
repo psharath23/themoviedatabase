@@ -1,0 +1,23 @@
+.modal {
+  top: 0px;
+  left: 0px;
+  width: 50vw;
+  max-height: 50vh;
+  position: fixed !important;
+  z-index: 1000;
+  transform: translate(50%, 0%);
+  background: #fff;
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  .modal-content {
+    height: 100%;
+    .body {
+      max-height: 80%;
+    }
+    .footer {
+      text-align: right;
+    }
+  }
+}

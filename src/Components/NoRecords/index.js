@@ -1,0 +1,1 @@
+export {NoRecords as default } from "./component"

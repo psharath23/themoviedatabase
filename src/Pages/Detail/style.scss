@@ -1,0 +1,184 @@
+.details {
+  display: inline-block;
+  width: 100%;
+  .main-details {
+    height: 60vh;
+    display: flex;
+    margin-bottom: 10px;
+    overflow: hidden;
+    .image {
+      flex: 2;
+      position: relative;
+      overflow: hidden;
+      max-width: 100%;
+      img {
+        max-width: 100%;
+        height: 100%;
+      }
+      .overview {
+        font-size: smaller;
+        width: calc(100% - 24px);
+        text-overflow: ellipsis;
+        display: block;
+        position: absolute;
+        padding: 2px;
+        text-align: left;
+        bottom: 10px;
+        color: black;
+        background: linear-gradient(358deg, white, transparent);
+        visibility: hidden;
+      }
+      .overview:hover {
+        visibility: visible;
+      }
+    }
+    .description {
+      padding: 10px;
+      flex: 1;
+      text-align: left;
+      .movie-title {
+        font-size: 20px;
+        font-weight: bold;
+        .movie-tagline {
+          color: grey;
+          font-size: small;
+          font-weight: normal;
+          font-style: italic;
+        }
+      }
+
+      .circle .img-component img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+
+      .wish-list-section {
+        text-align: right;
+      }
+      div {
+        margin-bottom: 5px;
+      }
+      .subtitle {
+        color: grey;
+        padding-left: 50px;
+      }
+    }
+  }
+  .additional-info {
+    height: 25vh;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 426px) {
+  .details {
+    .main-details {
+      flex-direction: column;
+      height: 80vh;
+      .image {
+        img {
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+.rumored {
+  background: white;
+  color: orange !important;
+  border-color: orange !important;
+}
+
+.planned {
+  background: white;
+  color: lightgreen !important;
+  border-color: lightgreen !important;
+}
+
+.in-production {
+  background: white;
+  color: blue !important;
+  border-color: blue !important;
+}
+
+.post-production {
+  background: white;
+  color: lightblue !important;
+  border-color: lightblue !important;
+}
+
+.canceled {
+  background: white;
+  color: red !important;
+  border-color: red !important;
+}
+
+.released {
+  background: white;
+  border-color: green !important;
+  color: green !important;
+}
+
+.upcoming {
+  background: white;
+  color: grey !important;
+  border-color: grey !important;
+}
+
+$toprated: #406028;
+$latest: #4e4ea5;
+$upcoming: #040425;
+
+@mixin theme($fontfamily, $color) {
+  font-family: $fontfamily;
+  color: white !important;
+  .remove {
+    background: red !important;
+    border-color: red !important;
+  }
+  .remove:hover {
+    color: red;
+    background: white !important;
+    border-color: red !important;
+  }
+  *.badge {
+    color: white;
+    border-color: white;
+  }
+  .additional-info {
+    .reviews {
+      .review {
+        color: white;
+        border-color: white;
+      }
+    }
+  }
+
+  button {
+    background-color: $color !important;
+    color: white;
+  }
+
+  button:hover {
+    background-color: white !important;
+    color: $color !important;
+    border: solid 1px $color;
+  }
+
+  .card {
+    background: linear-gradient(45deg, $color, white);
+  }
+}
+
+.latest {
+  @include theme("cursive", $latest);
+}
+
+.upcoming {
+  @include theme("monospace", $upcoming);
+}
+
+.toprated {
+  @include theme("trebuchet", $toprated);
+}

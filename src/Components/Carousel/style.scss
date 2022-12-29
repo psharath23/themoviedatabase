@@ -1,0 +1,97 @@
+@use "./../../variables";
+// $mobilemin: 320px;
+// $mobilemax: 425px;
+// $tablet: 768px;
+// $desktopmin: 1024px;
+// $desktopmax: 1440px;
+// $widescreenmax: 2560px;
+
+.carousel {
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+
+  .carousel-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .carousel-items {
+      scroll-behavior: smooth;
+      transition: scroll smooth 2s;
+      width: calc(100% - 30px);
+      overflow-x: scroll;
+      overflow-y: hidden;
+      height: 100%;
+      display: flex;
+
+      ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none;
+    }
+
+    .carousel-items::-webkit-scrollbar {
+      display: none;
+    }
+
+    .indicator-left {
+      padding: 0px 5px 0px 5px;
+      width: 10px;
+      display: flex;
+      justify-content: center;
+      // height: 100%;
+      flex-direction: column;
+      .img-component {
+        height: 15px;
+      }
+      *img {
+        width: 15px;
+      }
+    }
+    .indicator-right {
+      width: 10px;
+      padding: 0px 5px 0px 5px;
+      display: flex;
+      justify-content: center;
+      // height: 100%;
+      flex-direction: column;
+      .img-component {
+        height: 15px;
+      }
+      *img {
+        width: 15px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .carousel-indexes {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    .carousel-dots {
+      .circle {
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: grey;
+      }
+
+      .active {
+        border: solid 1px grey;
+        background-color: white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: #{mobilemin}) and (max-width: #{mobilemax}) {
+}
+
+@media screen and (min-width: #{tablet}) and (max-width: #{desktopmin}) {
+}
+
+@media screen and (min-width: #{desktopmin}) and (max-width: #{desktopmax}) {
+}
+
+@media screen and (min-width: #{desktopmax}) and (max-width: #{widescreenmax}) {
+}

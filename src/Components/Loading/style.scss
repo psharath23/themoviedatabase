@@ -1,0 +1,46 @@
+.loading {
+  width: 100%;
+  text-align: center;
+  color: black;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background: #fff;
+}
+
+.loading-dots {
+}
+
+.loading-dots::after {
+  content: "";
+  animation: dots 1s infinite alternate;
+}
+
+@keyframes dots {
+  0% {
+    content: ".";
+  }
+
+  50% {
+    content: "..";
+  }
+
+  100% {
+    content: "...";
+  }
+}
+
+.fade {
+  animation: disappear 2s;
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}

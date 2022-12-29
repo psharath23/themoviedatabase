@@ -1,0 +1,1 @@
+export {usePersistedState as default } from "./hook"

@@ -1,0 +1,1 @@
+export { ResourceNotFound as default } from "./page"

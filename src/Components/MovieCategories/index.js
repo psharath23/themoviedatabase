@@ -1,0 +1,1 @@
+export { MovieCategories as default } from "./component"

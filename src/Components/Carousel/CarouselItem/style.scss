@@ -1,0 +1,67 @@
+@import "./../../../variables";
+.carousel-item {
+  text-align: center;
+  .carousel-body {
+    margin-bottom: 5px;
+    width: 100%;
+    .carousel-image {
+      flex: 1;
+      align-self: center;
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 426px) {
+  .carousel-item {
+    width: 107px;
+    .carousel-body {
+      .carousel-image {
+        img {
+          width: 65px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .carousel-item {
+    width: 154px;
+    .carousel-body {
+      .carousel-image {
+        img {
+          width: 74px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1441px) {
+  .carousel-item {
+    width: 167px;
+    .carousel-body {
+      .carousel-image {
+        img {
+          width: 74px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 2560px) {
+  .carousel-item {
+    width: 128px;
+    .carousel-body {
+      .carousel-image {
+        img {
+          width: 90px;
+        }
+      }
+    }
+  }
+}

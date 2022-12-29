@@ -1,0 +1,1 @@
+export {ReadMore as default } from "./component"

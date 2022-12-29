@@ -1,0 +1,1 @@
+export { withDataFetching as default } from "./hook"
