@@ -28,7 +28,9 @@
         background: linear-gradient(358deg, white, transparent);
         visibility: hidden;
       }
-      .overview:hover {
+    }
+    .image:hover {
+      .overview {
         visibility: visible;
       }
     }
