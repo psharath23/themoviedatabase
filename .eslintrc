@@ -1,0 +1,19 @@
+{
+    "parser": "@babel/eslint-parser",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react/jsx-runtime",
+      "plugin:react-hooks/recommended",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "max-len": [1, 80, 2, { "ignoreComments": true }],
+      "react/react-in-jsx-scope": "off"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "plugins": ["jest"]
+  }
